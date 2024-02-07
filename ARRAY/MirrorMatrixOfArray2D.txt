@@ -1,0 +1,36 @@
+
+import java.util.Scanner;
+class MirrorMatrixOfArray2D{
+    public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		int i,j;
+		int[][] arr = new int [3][3];
+		int[][] Arr = new int [3][3];
+		
+		System.out.print("Enter Array's Element : ");
+		for(i=0; i<arr.length; i++){
+			for(j=0; j<arr.length; j++){		
+			arr[i][j] = sc.nextInt();
+			}
+		}
+		
+		System.out.println("1st 2D Array is now matrix form:= ");
+		for(i=0;i<arr.length; i++){
+			for(j=0; j<arr.length; j++){
+			System.out.print(arr[i][j]+" ");
+			}System.out.println();
+		}
+		for(i=0; i<Arr.length; i++){
+			for(j=0; j<Arr.length; j++){		
+			Arr[i][j] = arr[j][i];
+			}
+		}
+		System.out.println("Transpose 2D Array is now matrix form:= ");
+		for(i=0;i<Arr.length; i++){
+			for(j=0; j<Arr.length; j++){
+			System.out.print(Arr[i][j]+" ");
+			}System.out.println();
+		}
+		
+	}
+}
